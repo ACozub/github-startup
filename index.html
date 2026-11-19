@@ -1,83 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI+Design Studio Command Center</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artificial Motion | Andy’s stop-motion research</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<!--
-  THIS IS YOUR DASHBOARD. GitHub Pages serves this file.
-  Replace the placeholder text below with the real content from your
-  AI+Design Studio Command Center (Canvas: Project 2, Step 2).
-  KEEP OR TRIM: delete any <section> you did not build - all seven or a
-  subset is fine. Beginnings-level content is fine; this is the on-ramp,
-  not Project 5. Make it yours; do not leave it looking like a template.
--->
 <body>
-  <header class="site-header">
-    <p class="eyebrow">AI + Design Studio &#183; Command Center</p>
-    <h1 id="project-title">Your Project Title</h1>
-    <p class="tagline">One-line summary of what you are investigating &#8212; and your name.</p>
-  </header>
-
-  <main class="container">
-
-    <!-- Project Identity Card -->
-    <section aria-labelledby="identity-h">
-      <h2 id="identity-h">Project Identity Card</h2>
-      <p>Title, curiosity statement, short summary, audience / context, and possible final direction(s).</p>
-    </section>
-
-    <!-- Inquiry Brief -->
-    <section aria-labelledby="inquiry-h">
-      <h2 id="inquiry-h">Inquiry Brief</h2>
-      <p>Your research question, why it matters, what you need to learn, and 2&#8211;3 possible final outcomes.</p>
-    </section>
-
-    <!-- Source Starter List -->
-    <section aria-labelledby="sources-h">
-      <h2 id="sources-h">Source Starter List</h2>
-      <ul>
-        <li>Source 1 &#8212; title, creator, link, type, why it matters</li>
-        <li>Source 2 &#8212; title, creator, link, type, why it matters</li>
-        <li>Source 3 &#8212; optional</li>
-      </ul>
-    </section>
-
-    <!-- Project Brief / Weekly Roadmap -->
-    <section aria-labelledby="roadmap-h">
-      <h2 id="roadmap-h">Project Brief / Weekly Roadmap</h2>
-      <p>Weeks 5&#8211;11: goal, activities, tools, output, and success indicator for each week.</p>
-    </section>
-
-    <!-- Prompt Log -->
-    <section aria-labelledby="prompts-h">
-      <h2 id="prompts-h">Prompt Log</h2>
-      <p>Each entry: the prompt used, model / tool, output summary, and what changed afterward.</p>
-    </section>
-
-    <!-- Experiment Log -->
-    <section aria-labelledby="experiments-h">
-      <h2 id="experiments-h">Experiment Log</h2>
-      <p>Each experiment: what you tried, notes, what worked, what failed, and the next step.</p>
-    </section>
-
-    <!-- Links / Workspace Board -->
-    <section aria-labelledby="links-h">
-      <h2 id="links-h">Links / Workspace Board</h2>
-      <ul>
-        <li>Milanote / Notion / Figma board</li>
-        <li>AI tools used</li>
-        <li>Repo / site link</li>
-        <li>Working files (Figma, code, assets)</li>
-      </ul>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <p>DESN 374 &#183; Command Center &#183; built with the Interview &#8594; Brainstorm &#8594; Plan &#8594; Code &#8594; Commit workflow</p>
-  </footer>
+<a class="skip" href="#main">Skip to research</a>
+<header><div class="bar"><strong>Andy’s studio notebook</strong><nav aria-label="Sections"><a href="#log">Experiments</a><a href="#sources">Sources</a><a href="#gallery">Visual notes</a><a href="#workspace">Workspace</a></nav></div></header>
+<main id="main">
+  <section class="cover" aria-labelledby="title">
+    <div><p class="label">AI + Design Studio / Stop-motion research</p>
+      <h1 id="title">Artificial<br><i>Motion</i></h1>
+      <p class="question">How far can generative AI be pushed to create convincing stop-motion animation, and what can its successes and failures reveal about the technology's creative potential and limitations?</p>
+      <p>I’m working toward a 30–60 second short. I judge each shot by its movement and timing, the consistency of its materials, and how much control I have over the next pose.</p>
+    </div>
+    <figure class="cover-art"><a href="images/visual-notes-ii4.jpg"><img src="images/visual-notes-ii4.jpg" alt="Notebook spread with a layered paper landscape, a bird sketch and a comparison of cutout movement and stepped animation."></a><figcaption>From my notebook · Paper cutout motion study</figcaption></figure>
+  </section>
+  <section id="log"><h2>Experiment log</h2>
+    <ol class="log">
+      <li><span class="label">Day 5 · Flow</span><div><h3>Walk, then wave</h3><p>The LEGO figure kept its rigid shape, but its legs bent incorrectly and its head twisted during the wave. On the next pass I specified which joints could move.</p></div></li>
+      <li><span class="label">Day 6 · Flow</span><div><h3>Clay in motion</h3><p>The blob changed shape, but the movement felt computer-generated. I want to try fewer poses and give each change in silhouette a purpose.</p></div></li>
+      <li><time class="label" datetime="2026-11-17">17 Nov 2026 · Review</time><div><h3>What the Flow tests taught me</h3><p>A convincing still can fall apart in motion. The bird barely lifted off the ground, and the run cycle missed the obstacle jump even after prompt revisions. I’m keeping these clips for comparison.</p></div></li>
+    </ol>
+    <aside><strong>Next experiment</strong><p>Animate the same paper cutout taking off in two ways: generate a clip, then build the action one pose at a time. Compare when its feet leave the ground and whether the paper edges hold their shape.</p></aside>
+  </section>
+  <section id="sources"><h2>Sources &amp; notes</h2><div class="pairs">
+    <article><p class="label">Interaction 3 · PixCirce</p><h3><a href="https://pixcirce.com/blog/how-to-make-stop-motion-animation-with-ai">Building a shot one pose at a time</a></h3><p>Changing one pose per frame gives me a way to test whether the character, set and lighting hold steady. PixCirce’s consistency claims still need an independent trial.</p><a class="note-link" href="research/interaction-3.html">Read interaction 3 notes</a></article>
+    <article><p class="label">Interaction 4 · Framesail</p><h3><a href="https://framesail.com/blog/ai-paper-cutout-animation">Making paper move</a></h3><p>Framesail’s short uses flat shapes and layered paper. I want to see whether those constraints help another video model keep its characters consistent.</p><a class="note-link" href="research/interaction-4.html">Read interaction 4 notes</a></article>
+    <article><p class="label">Interaction 1 · Lindsey Elaine Howell · University of Bath</p><h3><a href="https://researchportal.bath.ac.uk/en/studentTheses/investigating-how-computational-tools-can-improve-the-production-/">Keeping the set still</a></h3><p>Howell’s set-shift experiments shaped my early companion-app idea. They also give me a test for generated footage: watch the background while the subject moves.</p><a class="note-link" href="research/interaction-1.html">Read interaction 1 notes</a></article>
+    <article><p class="label">Interaction 2 · Vincent Frei interviewing LAIKA’s Steve Emerson</p><h3><a href="https://www.artofvfx.com/kubo-and-the-two-strings-steve-emerson-vfx-supervisor-laika/">Blending puppets and digital effects</a></h3><p>The Kubo production team combined physical sets and puppets with digital compositing. Their choices give me a reference for judging how much handmade detail survives a digital workflow.</p><a class="note-link" href="research/interaction-2.html">Read interaction 2 notes</a></article>
+  </div><details><summary>Eight supporting sources</summary><ul class="references">
+    <li><a href="https://help.stopmotionstudio.com/en/manual/Onion_Skinning">Stop Motion Studio · Onion skinning</a><p>Compare a new pose with the previous frame.</p></li>
+    <li><a href="https://www.dragonframe.com/dragonframe-software/">Dragonframe · Software features</a><p>Use overlays and difference views as references for spotting unintended movement.</p></li>
+    <li><a href="https://scikit-image.org/docs/stable/auto_examples/applications/plot_image_comparison.html">scikit-image · Visual image comparison</a><p>Blend two frames to see which edges move.</p></li>
+    <li><a href="https://help.stopmotionstudio.com/en/manual/Animation_Guides">Stop Motion Studio · Animation guides</a><p>Plan an object’s path and check its position against a guide.</p></li>
+    <li><a href="https://www.dragonframe.com/ufaqs/how-to-reduce-flicker-what-are-possible-sources-of-flicker/">Dragonframe · Reducing flicker</a><p>Recognize exposure changes that interrupt continuity.</p></li>
+    <li><a href="https://docs.opencv.org/4.12.0/d1/dc5/tutorial_background_subtraction.html">OpenCV · Background subtraction</a><p>Isolate changes against the background of a shot.</p></li>
+    <li><a href="https://www.acmi.net.au/education/school-program-and-resources/make-stop-motion-animation/">ACMI · Make a stop-motion animation</a><p>Use storyboards, lighting and frame rate as a baseline for physical animation.</p></li>
+    <li><a href="https://support.google.com/flow/answer/16353334?hl=en">Google · Create videos in Flow</a><p>Compare the control offered by prompts, reference images and start or end frames.</p></li>
+  </ul></details></section>
+  <section id="gallery"><h2>Visual notebook</h2><p>Open a spread or mind map to read it at full size.</p><div class="pairs">
+    <article><p class="label">Interaction 3</p><h3>Building a shot one pose at a time</h3><div class="plates">
+      <figure><a href="images/visual-notes-ii3.jpg"><img loading="lazy" src="images/visual-notes-ii3.jpg" alt="Notebook spread with clay, paper and felt sketches beside a four-step sequence from planning poses to exporting the loop."></a><figcaption>Notebook spread</figcaption></figure>
+      <figure><a href="images/mind-map-ii3.png"><img loading="lazy" src="images/mind-map-ii3.png" alt="Map branching from AI stop-motion into shot planning, keyframes, timing and export."></a><figcaption>Mind map</figcaption></figure>
+    </div></article>
+    <article><p class="label">Interaction 4</p><h3>Making paper move</h3><div class="plates">
+      <figure><a href="images/visual-notes-ii4.jpg"><img loading="lazy" src="images/visual-notes-ii4.jpg" alt="Notebook spread with a layered paper landscape, a bird sketch and a comparison of cutout movement and stepped animation."></a><figcaption>Notebook spread</figcaption></figure>
+      <figure><a href="images/mind-map-ii4.png"><img loading="lazy" src="images/mind-map-ii4.png" alt="Mind map grouping paper cutout research into style, material rules, motion, consistency and applications."></a><figcaption>Mind map</figcaption></figure>
+    </div></article>
+    <article><p class="label">Interaction 1</p><h3>Keeping the set still</h3><div class="plates">
+      <figure><a href="images/visual-notes-ii1.jpg"><img loading="lazy" src="images/visual-notes-ii1.jpg" alt="Pencil diagrams of a puppet and its silhouette, two forest frames showing set shift, and physical and digital plasticine."></a><figcaption>Notebook spread</figcaption></figure>
+      <figure><a href="images/mind-map-ii1.png"><img loading="lazy" src="images/mind-map-ii1.png" alt="Branching map of Howell’s thesis covering rig removal, set shifts and plasticine shading."></a><figcaption>Mind map</figcaption></figure>
+    </div></article>
+    <article><p class="label">Interaction 2</p><h3>Blending puppets and digital effects</h3><div class="plates">
+      <figure><a href="images/visual-notes-ii2.jpg"><img loading="lazy" src="images/visual-notes-ii2.jpg" alt="Notebook pages with an overlapping-circle diagram of practical and digital work, a production table and two eye sketches showing seam cleanup."></a><figcaption>Notebook spread</figcaption></figure>
+      <figure><a href="images/mind-map-ii2.png"><img loading="lazy" src="images/mind-map-ii2.png" alt="Tall branching map of the production methods and visual effects used in Kubo and the Two Strings."></a><figcaption>Mind map</figcaption></figure>
+    </div></article>
+  </div></section>
+  <section id="workspace"><h2>Workspace</h2><nav class="workspace" aria-label="Project resources"><a href="https://app.milanote.com/1XmdDf1a2yU752?p=n3sJsQHEAUN" target="_blank" rel="noopener noreferrer">Main Milanote board</a><a href="research/inquiry-brief.html">Inquiry brief</a><a href="research/research-map.html">Research map</a><a href="https://github.com/ACozub/github-startup">GitHub repository</a></nav>
+    <details><summary>Interaction PDFs</summary><ul><li><a href="https://media.milanote.com/p/files/1Xsumu1Y2Vuh3X/bwH/AI_Stop-Motion_Blueprint.pdf">Building a shot one pose at a time (PDF)</a></li>
+<li><a href="https://media.milanote.com/p/files/1XtTE71AJ03Mb5/f7u/Mastering_AI_Paper_Cutout_Animation.pdf">Making paper move (PDF)</a></li>
+<li><a href="https://media.milanote.com/p/files/1XoSZg1wLeOR0R/X4U/Automating_Stop_Motion_Set_Shift.pdf">Keeping the set still (PDF)</a></li>
+<li><a href="https://media.milanote.com/p/files/1Xrolh1U2hQo3R/wbP/Crafting_Kubo_s_Hybrid_VFX.pdf">Blending puppets and digital effects (PDF)</a></li></ul></details>
+  </section>
+</main><footer>Andy · AI + Design Studio <a href="#title">Back to top ↑</a></footer>
 </body>
 </html>

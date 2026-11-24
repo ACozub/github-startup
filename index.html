@@ -9,12 +9,25 @@
   <script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script defer src="https://dashersw.github.io/liquid-glass-js/container.js"></script>
   <script defer src="notebook-glass.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.3.1",
+        "react/": "https://esm.sh/react@18.3.1/",
+        "react-dom": "https://esm.sh/react-dom@18.3.1?external=react",
+        "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?external=react",
+        "@shadergradient/react": "https://esm.sh/@shadergradient/react@2?bundle&external=react,react-dom&deps=@react-three/fiber@8.18.0,three@0.170.0"
+      }
+    }
+  </script>
+  <script type="module" src="cover-gradient.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to research</a>
 <header><div class="bar"><strong>Andy’s studio notebook</strong><nav aria-label="Sections"><a href="#log">Experiments</a><a href="#sources">Sources</a><a href="#gallery">Visual notes</a><a href="#workspace">Workspace</a></nav></div></header>
 <main id="main">
   <section class="cover" aria-labelledby="title">
+    <div class="cover-gradient" aria-hidden="true" inert></div>
     <div><p class="label">AI + Design Studio / Stop-motion research</p>
       <h1 id="title">Artificial<br><i>Motion</i></h1>
       <p class="question">How far can generative AI be pushed to create convincing stop-motion animation, and what can its successes and failures reveal about the technology's creative potential and limitations?</p>

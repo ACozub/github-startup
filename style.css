@@ -1,10 +1,13 @@
 :root {
-  color-scheme: light;
-  --paper: #f6f2e9;
-  --ink: #252820;
-  --accent: #874227;
-  --rule: #aca898;
-  --muted: #53564a;
+  color-scheme: dark;
+  --shader-forest: #386623;
+  --shader-sage: #56634a;
+  --shader-teal: #176869;
+  --paper: #11140f;
+  --ink: #e4e3dc;
+  --accent: #9ed67d;
+  --rule: #444b3f;
+  --muted: #c3c8b9;
 }
 * { box-sizing: border-box; }
 body {
@@ -14,17 +17,17 @@ body {
   font: 1rem/1.6 "Source Sans 3", "Segoe UI", sans-serif;
 }
 main, .bar, footer { width: min(72rem, 90%); margin-inline: auto; }
-header { border-bottom: 1px solid var(--ink); }
+header { border-bottom: 1px solid var(--rule); }
 .bar, footer, nav { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; align-items: center; }
 .bar, footer { justify-content: space-between; padding-block: 1rem; }
 .bar strong, .label, figcaption, footer { font-family: "IBM Plex Mono", Consolas, monospace; }
 .bar strong { font-size: .95rem; }
 a, summary { color: var(--accent); text-underline-offset: .2em; }
-a:hover, summary:hover { color: var(--ink); }
-:focus-visible { outline: 3px solid #13548a; outline-offset: 3px; }
-.skip { position: absolute; top: .5rem; left: .5rem; padding: .6rem; background: white; transform: translateY(-160%); z-index: 2; }
+a:hover, summary:hover { color: #a1d0cf; }
+:focus-visible { outline: 3px solid #a1d0cf; outline-offset: 3px; }
+.skip { position: absolute; top: .5rem; left: .5rem; padding: .6rem; background: #262b23; transform: translateY(-160%); z-index: 2; }
 .skip:focus { transform: none; }
-section { padding-block: clamp(2rem, 5vw, 4rem); border-bottom: 1px solid var(--ink); }
+section { padding-block: clamp(2rem, 5vw, 4rem); border-bottom: 1px solid var(--rule); }
 .cover-content, .pairs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 3rem; }
 .cover-content { position: relative; z-index: 1; align-items: center; }
 h1, h2, h3, .question { font-family: "Baskervville", Georgia, serif; }
@@ -39,19 +42,19 @@ p { margin: .65rem 0; }
 figure { margin: 0; min-width: 0; }
 figure a { display: block; }
 img { display: block; width: 100%; }
-.cover-art { padding: .8rem; background: #e6e1d4; border: 1px solid var(--rule); }
+.cover-art { padding: .8rem; background: #20241c; border: 1px solid var(--rule); }
 figcaption { margin-top: .5rem; font-size: .8rem; color: var(--muted); }
 .log, .references { padding: 0; list-style: none; }
 .log li { display: grid; grid-template-columns: 12rem minmax(0, 1fr); padding-block: 1.25rem; border-top: 1px solid var(--rule); }
 .log p, aside p { max-width: 70ch; }
-aside { padding: 1rem 1.4rem; border-left: 4px solid var(--accent); background: #ece7da; }
+aside { padding: 1rem 1.4rem; border-left: 4px solid var(--accent); background: #273321; }
 article { border-top: 1px solid var(--rule); padding-block: 1rem; }
 details { border-top: 1px solid var(--rule); margin-top: 1.5rem; padding-top: 1rem; }
 summary { cursor: pointer; font-weight: 650; }
 .references { columns: 2; column-gap: 3rem; }
 .references li { break-inside: avoid; padding-bottom: .8rem; }
 .plates { display: grid; grid-template-columns: 3fr 2fr; gap: .75rem; margin-top: 1rem; }
-.plates img { height: clamp(9rem, 14vw, 13rem); object-fit: contain; background: #fff; border: 1px solid var(--rule); }
+.plates img { height: clamp(9rem, 14vw, 13rem); object-fit: contain; background: #1b1e18; border: 1px solid var(--rule); }
 .workspace a { padding: .3rem 0; }
 footer { font-size: .85rem; }
 @media (max-width: 45rem) {
@@ -89,22 +92,22 @@ footer { font-size: .85rem; }
   .reader .plates { grid-template-columns: 1fr; }
 }
 
-/* Glass edges pick up the warm tones of the notebook paper. */
+/* Translucent sage highlights define the glass edges. */
 .bar {
   margin-block: .85rem;
   padding: .75rem 1.25rem;
-  border: 1px solid #cbc2b0;
+  border: 1px solid #505848;
   border-radius: 1.25rem;
-  background: linear-gradient(115deg, #fffdf8, #ece5d7 75%, #faf7ef);
-  box-shadow: inset 0 1px 1px white, 0 4px 12px #55432512;
+  background: linear-gradient(115deg, #31382b, #1b211a 75%, #29332c);
+  box-shadow: inset 0 1px 1px #becdb344, 0 4px 12px #0005;
 }
 header { border-bottom: 0; }
 .cover-art {
   position: relative;
   padding: .38rem;
   border-radius: 1.5rem;
-  background: linear-gradient(135deg, #fffdf7, #cfc3ac);
-  box-shadow: inset 0 1px 1px white, 0 8px 24px #4d3b241a;
+  background: linear-gradient(135deg, #52604a, #222c28);
+  box-shadow: inset 0 1px 1px #becdb344, 0 8px 24px #0005;
 }
 .cover-art img { border-radius: 1.15rem; }
 .cover-art figcaption {
@@ -118,13 +121,13 @@ header { border-bottom: 0; }
   isolation: isolate;
   pointer-events: none;
   color: var(--ink);
-  background: rgba(250, 247, 238, .84);
+  background: #11150fd6;
   backdrop-filter: blur(9px);
-  box-shadow: inset 0 0 0 1px #ffffffba, 0 2px 9px #33291824;
+  box-shadow: inset 0 0 0 1px #c6d4be66, 0 2px 9px #0005;
 }
 .cover-art .notebook-lens { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; pointer-events: none; }
-.cover-art figcaption span { position: relative; display: block; padding: .45rem .8rem; background: rgba(250,247,238,.68); }
-.note-link { border-radius: 1.2rem; box-shadow: inset 0 1px 1px white; }
+.cover-art figcaption span { position: relative; display: block; padding: .45rem .8rem; background: #11150fd9; }
+.note-link { border-radius: 1.2rem; box-shadow: inset 0 1px 1px #becdb344; }
 @media (forced-colors: active), (prefers-reduced-transparency: reduce) {
   .cover-art figcaption { background: Canvas; color: CanvasText; backdrop-filter: none; }
   .cover-art figcaption span { background: transparent; }
@@ -143,17 +146,17 @@ header { border-bottom: 0; }
   overflow: hidden;
   border-radius: 1.5rem 1.5rem 0 0;
   pointer-events: none;
-  background: radial-gradient(ellipse at 75% 20%, #b9bca2, transparent 60%),
-              linear-gradient(125deg, #f6f2e9, #ead8b6 60%, #c88d71);
+  background: radial-gradient(ellipse at 75% 20%, var(--shader-teal), transparent 60%),
+              linear-gradient(125deg, var(--paper), var(--shader-forest) 45%, var(--shader-sage) 72%, var(--shader-teal));
 }
 .cover-gradient::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(100deg, #f6f2e9ed, #f6f2e9bc 43%, #f6f2e930 85%);
+  background: linear-gradient(100deg, #11140ff5, #11140fe6 43%, #11140f38 85%);
 }
 @media (max-width: 45rem) {
   .cover-gradient::after {
-    background: linear-gradient(165deg, #f6f2e9ed, #f6f2e9bf 58%, #f6f2e94d);
+    background: linear-gradient(165deg, #11140ff5, #11140fea 58%, #11140f88);
   }
 }

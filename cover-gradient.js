@@ -18,16 +18,20 @@ async function updateGradient() {
     const [{ createElement }, { createRoot }, { ShaderGradientCanvas, ShaderGradient }] = await modules;
     if (root || !visible || staticMode.matches || document.hidden) return;
 
+    const palette = getComputedStyle(backdrop);
     root = createRoot(backdrop);
     root.render(createElement(ShaderGradientCanvas, {
       pixelDensity: 1, style: { position: 'absolute', inset: 0, width: '100%', height: '100%' }
     }, createElement(ShaderGradient, {
       type: 'plane', animate: 'on', lightType: '3d', grain: 'off',
-      color1: '#ead8b6', color2: '#b87350', color3: '#9b9f80',
+      color1: palette.getPropertyValue('--shader-forest').trim(),
+      color2: palette.getPropertyValue('--shader-sage').trim(),
+      color3: palette.getPropertyValue('--shader-teal').trim(),
+      brightness: 0.85,
       cDistance: 3.6, cPolarAngle: 90, uFrequency: 5.5, uStrength: 4, uSpeed: 0.12
     })));
   } catch (error) {
-    console.warn('Cover shader unavailable. Using the paper gradient.', error);
+    console.warn('Cover shader unavailable. Using the static gradient.', error);
   }
 }
 

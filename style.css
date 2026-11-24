@@ -30,10 +30,10 @@ a:hover, summary:hover { color: var(--hot-pink); }
 section { padding-block: clamp(2rem, 5vw, 4rem); border-bottom: 1px solid var(--rule); }
 .cover-content, .pairs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 3rem; }
 .cover-content { position: relative; z-index: 1; align-items: center; }
-h1, h2, h3, .question { font-family: "Baskervville", Georgia, serif; }
+h1, h2, h3, .question { font-family: "Space Grotesk", Bahnschrift, "Segoe UI", sans-serif; }
 h1, h2, h3 { margin: 0; line-height: 1.08; }
-h1 { font-size: clamp(4rem, 8vw, 7.4rem); letter-spacing: -.065em; }
-h1 i { color: var(--accent); }
+h1 { font-size: clamp(4rem, 8vw, 7.4rem); letter-spacing: -.045em; }
+h1 i { color: var(--accent); font-style: normal; }
 h2 { font-size: clamp(2.25rem, 5vw, 3.6rem); margin-bottom: 1.5rem; letter-spacing: -.04em; }
 h3 { font-size: 1.5rem; }
 p { margin: .65rem 0; }

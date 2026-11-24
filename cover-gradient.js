@@ -20,7 +20,7 @@ async function updateGradient() {
 
     root = createRoot(backdrop);
     root.render(createElement(ShaderGradientCanvas, {
-      pixelDensity: 1, style: { width: '100%', height: '100%' }
+      pixelDensity: 1, style: { position: 'absolute', inset: 0, width: '100%', height: '100%' }
     }, createElement(ShaderGradient, {
       type: 'plane', animate: 'on', lightType: '3d', grain: 'off',
       color1: '#ead8b6', color2: '#b87350', color3: '#9b9f80',

@@ -1,13 +1,13 @@
 :root {
   color-scheme: dark;
-  --shader-forest: #386623;
-  --shader-sage: #56634a;
-  --shader-teal: #176869;
-  --paper: #11140f;
-  --ink: #e4e3dc;
-  --accent: #9ed67d;
-  --rule: #444b3f;
-  --muted: #c3c8b9;
+  --neon-green: #00FF85;
+  --electric-blue: #1E90FF;
+  --hot-pink: #FF0099;
+  --paper: #0D0D0D;
+  --ink: #FFFFFF;
+  --accent: var(--neon-green);
+  --rule: #404047;
+  --muted: #C7C7CD;
 }
 * { box-sizing: border-box; }
 body {
@@ -23,9 +23,9 @@ header { border-bottom: 1px solid var(--rule); }
 .bar strong, .label, figcaption, footer { font-family: "IBM Plex Mono", Consolas, monospace; }
 .bar strong { font-size: .95rem; }
 a, summary { color: var(--accent); text-underline-offset: .2em; }
-a:hover, summary:hover { color: #a1d0cf; }
-:focus-visible { outline: 3px solid #a1d0cf; outline-offset: 3px; }
-.skip { position: absolute; top: .5rem; left: .5rem; padding: .6rem; background: #262b23; transform: translateY(-160%); z-index: 2; }
+a:hover, summary:hover { color: var(--hot-pink); }
+:focus-visible { outline: 3px solid var(--electric-blue); outline-offset: 3px; }
+.skip { position: absolute; top: .5rem; left: .5rem; padding: .6rem; background: #202024; transform: translateY(-160%); z-index: 2; }
 .skip:focus { transform: none; }
 section { padding-block: clamp(2rem, 5vw, 4rem); border-bottom: 1px solid var(--rule); }
 .cover-content, .pairs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 3rem; }
@@ -42,19 +42,19 @@ p { margin: .65rem 0; }
 figure { margin: 0; min-width: 0; }
 figure a { display: block; }
 img { display: block; width: 100%; }
-.cover-art { padding: .8rem; background: #20241c; border: 1px solid var(--rule); }
+.cover-art { padding: .8rem; background: #19191D; border: 1px solid var(--rule); }
 figcaption { margin-top: .5rem; font-size: .8rem; color: var(--muted); }
 .log, .references { padding: 0; list-style: none; }
 .log li { display: grid; grid-template-columns: 12rem minmax(0, 1fr); padding-block: 1.25rem; border-top: 1px solid var(--rule); }
 .log p, aside p { max-width: 70ch; }
-aside { padding: 1rem 1.4rem; border-left: 4px solid var(--accent); background: #273321; }
+aside { padding: 1rem 1.4rem; border-left: 4px solid var(--electric-blue); background: #151B24; }
 article { border-top: 1px solid var(--rule); padding-block: 1rem; }
 details { border-top: 1px solid var(--rule); margin-top: 1.5rem; padding-top: 1rem; }
 summary { cursor: pointer; font-weight: 650; }
 .references { columns: 2; column-gap: 3rem; }
 .references li { break-inside: avoid; padding-bottom: .8rem; }
 .plates { display: grid; grid-template-columns: 3fr 2fr; gap: .75rem; margin-top: 1rem; }
-.plates img { height: clamp(9rem, 14vw, 13rem); object-fit: contain; background: #1b1e18; border: 1px solid var(--rule); }
+.plates img { height: clamp(9rem, 14vw, 13rem); object-fit: contain; background: #19191C; border: 1px solid var(--rule); }
 .workspace a { padding: .3rem 0; }
 footer { font-size: .85rem; }
 @media (max-width: 45rem) {
@@ -79,7 +79,7 @@ footer { font-size: .85rem; }
   font-weight: 600;
   text-decoration: none;
 }
-.note-link:hover { color: var(--paper); background: var(--accent); }
+.note-link:hover { color: var(--paper); background: var(--hot-pink); }
 .reader { max-width: 44rem; }
 .reader section { padding-block: clamp(1.5rem, 4vw, 2.75rem); }
 .reader h1 { font-size: clamp(2.7rem, 7vw, 5rem); letter-spacing: -.045em; }
@@ -92,22 +92,22 @@ footer { font-size: .85rem; }
   .reader .plates { grid-template-columns: 1fr; }
 }
 
-/* Translucent sage highlights define the glass edges. */
+/* Translucent highlights define the glass edges. */
 .bar {
   margin-block: .85rem;
   padding: .75rem 1.25rem;
-  border: 1px solid #505848;
+  border: 1px solid #42424A;
   border-radius: 1.25rem;
-  background: linear-gradient(115deg, #31382b, #1b211a 75%, #29332c);
-  box-shadow: inset 0 1px 1px #becdb344, 0 4px 12px #0005;
+  background: linear-gradient(115deg, #232326, #141416 75%, #202024);
+  box-shadow: inset 0 1px 1px #ffffff33, 0 4px 12px #0005;
 }
 header { border-bottom: 0; }
 .cover-art {
   position: relative;
   padding: .38rem;
   border-radius: 1.5rem;
-  background: linear-gradient(135deg, #52604a, #222c28);
-  box-shadow: inset 0 1px 1px #becdb344, 0 8px 24px #0005;
+  background: linear-gradient(135deg, #484850, #1E1E23);
+  box-shadow: inset 0 1px 1px #ffffff33, 0 8px 24px #0005;
 }
 .cover-art img { border-radius: 1.15rem; }
 .cover-art figcaption {
@@ -121,13 +121,13 @@ header { border-bottom: 0; }
   isolation: isolate;
   pointer-events: none;
   color: var(--ink);
-  background: #11150fd6;
+  background: #0d0d0dd6;
   backdrop-filter: blur(9px);
-  box-shadow: inset 0 0 0 1px #c6d4be66, 0 2px 9px #0005;
+  box-shadow: inset 0 0 0 1px #ffffff44, 0 2px 9px #0005;
 }
 .cover-art .notebook-lens { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; pointer-events: none; }
-.cover-art figcaption span { position: relative; display: block; padding: .45rem .8rem; background: #11150fd9; }
-.note-link { border-radius: 1.2rem; box-shadow: inset 0 1px 1px #becdb344; }
+.cover-art figcaption span { position: relative; display: block; padding: .45rem .8rem; background: #0d0d0dd9; }
+.note-link { border-radius: 1.2rem; box-shadow: inset 0 1px 1px #ffffff33; }
 @media (forced-colors: active), (prefers-reduced-transparency: reduce) {
   .cover-art figcaption { background: Canvas; color: CanvasText; backdrop-filter: none; }
   .cover-art figcaption span { background: transparent; }
@@ -146,17 +146,17 @@ header { border-bottom: 0; }
   overflow: hidden;
   border-radius: 1.5rem 1.5rem 0 0;
   pointer-events: none;
-  background: radial-gradient(ellipse at 75% 20%, var(--shader-teal), transparent 60%),
-              linear-gradient(125deg, var(--paper), var(--shader-forest) 45%, var(--shader-sage) 72%, var(--shader-teal));
+  background: radial-gradient(ellipse at 75% 20%, var(--hot-pink), transparent 60%),
+              linear-gradient(125deg, var(--paper), var(--neon-green) 45%, var(--electric-blue) 72%, var(--hot-pink));
 }
 .cover-gradient::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(100deg, #11140ff5, #11140fe6 43%, #11140f38 85%);
+  background: linear-gradient(100deg, #0d0d0ded, #0d0d0dc9 43%, #0d0d0d24 85%);
 }
 @media (max-width: 45rem) {
   .cover-gradient::after {
-    background: linear-gradient(165deg, #11140ff5, #11140fea 58%, #11140f88);
+    background: linear-gradient(165deg, #0d0d0ded, #0d0d0dce 58%, #0d0d0d66);
   }
 }

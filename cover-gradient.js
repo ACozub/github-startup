@@ -24,10 +24,10 @@ async function updateGradient() {
       pixelDensity: 1, style: { position: 'absolute', inset: 0, width: '100%', height: '100%' }
     }, createElement(ShaderGradient, {
       type: 'plane', animate: 'on', lightType: '3d', grain: 'off',
-      color1: palette.getPropertyValue('--shader-forest').trim(),
-      color2: palette.getPropertyValue('--shader-sage').trim(),
-      color3: palette.getPropertyValue('--shader-teal').trim(),
-      brightness: 0.85,
+      color1: palette.getPropertyValue('--neon-green').trim(),
+      color2: palette.getPropertyValue('--electric-blue').trim(),
+      color3: palette.getPropertyValue('--hot-pink').trim(),
+      brightness: 1,
       cDistance: 3.6, cPolarAngle: 90, uFrequency: 5.5, uStrength: 4, uSpeed: 0.12
     })));
   } catch (error) {

@@ -88,3 +88,45 @@ footer { font-size: .85rem; }
 @media (max-width: 36rem) {
   .reader .plates { grid-template-columns: 1fr; }
 }
+
+/* Glass edges pick up the warm tones of the notebook paper. */
+.bar {
+  margin-block: .85rem;
+  padding: .75rem 1.25rem;
+  border: 1px solid #cbc2b0;
+  border-radius: 1.25rem;
+  background: linear-gradient(115deg, #fffdf8, #ece5d7 75%, #faf7ef);
+  box-shadow: inset 0 1px 1px white, 0 4px 12px #55432512;
+}
+header { border-bottom: 0; }
+.cover-art {
+  position: relative;
+  padding: .38rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, #fffdf7, #cfc3ac);
+  box-shadow: inset 0 1px 1px white, 0 8px 24px #4d3b241a;
+}
+.cover-art img { border-radius: 1.15rem; }
+.cover-art figcaption {
+  position: absolute;
+  left: .95rem;
+  bottom: .95rem;
+  max-width: calc(100% - 1.9rem);
+  margin: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  isolation: isolate;
+  pointer-events: none;
+  color: var(--ink);
+  background: rgba(250, 247, 238, .84);
+  backdrop-filter: blur(9px);
+  box-shadow: inset 0 0 0 1px #ffffffba, 0 2px 9px #33291824;
+}
+.cover-art .notebook-lens { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; pointer-events: none; }
+.cover-art figcaption span { position: relative; display: block; padding: .45rem .8rem; background: rgba(250,247,238,.68); }
+.note-link { border-radius: 1.2rem; box-shadow: inset 0 1px 1px white; }
+@media (forced-colors: active), (prefers-reduced-transparency: reduce) {
+  .cover-art figcaption { background: Canvas; color: CanvasText; backdrop-filter: none; }
+  .cover-art figcaption span { background: transparent; }
+  .cover-art .notebook-lens { display: none; }
+}
